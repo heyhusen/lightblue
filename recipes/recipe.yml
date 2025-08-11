@@ -29,7 +29,6 @@ modules:
       copr: 
         - atim/starship
         - atim/bottom
-        - harryjph/fonts
       nonfree: rpmfusion
       cleanup: true
     optfix:
@@ -87,14 +86,11 @@ modules:
 
   - type: default-flatpaks
     configurations:
-      - notify: true # Send notification after install/uninstall is finished 
-        # (true/false)
-        scope: system
-        # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
+      - scope: user
+        notify: true
+        install:
           - com.github.tchx84.Flatseal
           - com.spotify.Client
-      - scope: user # Also add Flathub user repo, but no user packages
 
   - type: gnome-extensions
     install:
