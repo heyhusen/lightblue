@@ -70,12 +70,18 @@ modules:
         - fedora-third-party
         - fedora-flathub-remote
         - fedora-workstation-repositories
+        - gnome-software-rpm-ostree
       auto-remove: true
 
   - type: systemd
     system:
       enabled:
         - docker
+
+  - type: script
+    scripts:
+      - remove-unused-repo.sh
+      - disable-layering.sh
 
   - type: fonts
     fonts:
