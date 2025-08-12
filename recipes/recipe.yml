@@ -102,6 +102,8 @@ modules:
     install:
       - Night Theme Switcher
 
+  - type: gschema-overrides
+
   - type: chezmoi
     repository: https://github.com/heyhusen/dotfiles
     file-conflict-policy: replace
