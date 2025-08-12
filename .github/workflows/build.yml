@@ -53,3 +53,27 @@ jobs:
 
           # enabled by default, disable if your image is small and you want faster builds
           maximize_build_space: false
+
+  iso:
+    name: Build ISO
+    runs-on: ubuntu-24.04
+    needs: build
+    if: github.event_name != 'pull_request'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build ISO
+        run: |
+          bash <(curl -s https://raw.githubusercontent.com/blue-build/cli/main/install.sh)
+          bluebuild generate-iso --iso-name ${{ github.event.repository.name }}.iso image ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}
+
+      - name: Upload disk image to Job Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          path: ${{ github.event.repository.name }}.iso
+          if-no-files-found: error
+          retention-days: 0
+          compression-level: 0
+          overwrite: true
