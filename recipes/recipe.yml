@@ -102,5 +102,10 @@ modules:
     install:
       - Night Theme Switcher
 
+  - type: chezmoi
+    repository: https://github.com/heyhusen/dotfiles
+    file-conflict-policy: replace
+    disable-update: true
+
   - type: signing # this sets up the proper policy & signing files for signed 
     # images to work fully
