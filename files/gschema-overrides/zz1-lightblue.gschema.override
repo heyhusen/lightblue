@@ -1,4 +1,4 @@
-[org/gnome/Ptyxis]
+[org.gnome.Ptyxis]
 default-profile-uuid='11458748f228d5a0d0b2fc186759a083'
 font-name='JetBrainsMono Nerd Font 10'
 interface-style='dark'
@@ -7,7 +7,7 @@ restore-window-size=true
 use-system-font=false
 window-size=(uint32 238, uint32 59)
 
-[org/gnome/desktop/interface]
+[org.gnome.desktop.interface]
 clock-format='24h'
 color-scheme='prefer-dark'
 cursor-theme='Adwaita'
@@ -18,47 +18,47 @@ icon-theme='Adwaita'
 monospace-font-name='JetBrainsMono Nerd Font 11'
 show-battery-percentage=true
 
-[org/gnome/desktop/wm/preferences]
+[org.gnome.desktop.wm.preferences]
 button-layout='appmenu:minimize,maximize,close'
 
-[org/gnome/settings-daemon/plugins/color]
+[org.gnome.settings-daemon.plugins.color]
 night-light-enabled=true
 night-light-last-coordinates=(-0.49482300000000001, 117.14400000000001)
 night-light-schedule-automatic=false
 night-light-schedule-from=18.0
 
-[org/gnome/settings-daemon/plugins/media-keys]
+[org.gnome.settings-daemon.plugins.media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
 next=['<Control><Super>Right']
 play=['<Control><Super>p']
 previous=['<Control><Super>Left']
 
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
 binding='<Super>Return'
 command='ptyxis'
 name='Terminal'
 
-[org/gnome/shell]
+[org.gnome.shell]
 enabled-extensions=['nightthemeswitcher@romainvigier.fr', 'appindicatorsupport@rgcjonas.gmail.com', 'background-logo@fedorahosted.org']
 favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'org.mozilla.firefox.desktop', 'brave-browser.desktop', 'code.desktop', 'com.spotify.Client.desktop']
 
-[org/gnome/shell/extensions/nightthemeswitcher/cursor-variants]
+[org.gnome.shell.extensions.nightthemeswitcher.cursor-variants]
 day='Adwaita'
 enabled=true
 
-[org/gnome/shell/extensions/nightthemeswitcher/gtk-variants]
+[org.gnome.shell.extensions.nightthemeswitcher.gtk-variants]
 day='Adwaita'
 enabled=true
 night='Adwaita-dark'
 
-[org/gnome/shell/extensions/nightthemeswitcher/icon-variants]
+[org.gnome.shell.extensions.nightthemeswitcher.icon-variants]
 day='Adwaita'
 enabled=true
 
-[org/gnome/shell/extensions/nightthemeswitcher/shell-variants]
+[org.gnome.shell.extensions.nightthemeswitcher.shell-variants]
 enabled=true
 
-[org/gnome/shell/extensions/nightthemeswitcher/time]
+[org.gnome.shell.extensions.nightthemeswitcher.time]
 location=(-6.9159091703884261, 107.6071)
 manual-schedule=true
 nightthemeswitcher-ondemand-keybinding=['<Shift><Super>t']
