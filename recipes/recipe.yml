@@ -22,8 +22,10 @@ modules:
     repos:
       keys:
         - https://packages.microsoft.com/keys/microsoft.asc
+        - https://yum.tableplus.com/apt.tableplus.com.gpg.key
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+        - https://yum.tableplus.com/rpm/x86_64/tableplus.repo
       copr: 
         - atim/starship
         - atim/bottom
@@ -54,6 +56,7 @@ modules:
         - fzf
         - chromium
         - persepolis
+        - tableplus
     remove:
       packages:
         - gnome-tour
