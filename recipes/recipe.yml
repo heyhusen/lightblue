@@ -57,6 +57,7 @@ modules:
         - chromium
         - persepolis
         - tableplus
+        - zed
     remove:
       packages:
         - gnome-tour
