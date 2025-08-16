@@ -53,6 +53,7 @@ modules:
         - zoxide
         - fzf
         - chromium
+        - persepolis
     remove:
       packages:
         - gnome-tour
