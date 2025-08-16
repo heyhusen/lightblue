@@ -31,6 +31,18 @@ modules:
         - atim/bottom
       nonfree: rpmfusion
       cleanup: true
+    replace:
+      - from-repo: rpmfusion-free
+        packages:
+          - old: mesa-va-drivers
+            new: mesa-va-drivers-freeworld
+          - old: mesa-vdpau-drivers
+            new: mesa-vdpau-drivers-freeworld
+      - from-repo: rpmfusion-free
+        allow-erasing: true
+        packages:
+          - old: ffmpeg-free
+            new: ffmpeg
     install:
       packages:
         - terra-release
@@ -57,6 +69,8 @@ modules:
         - chromium
         - persepolis
         - tableplus
+        - libva-utils
+        - radeontop
     remove:
       packages:
         - gnome-tour
