@@ -40,7 +40,7 @@ name='Terminal'
 
 [org.gnome.shell]
 enabled-extensions=['nightthemeswitcher@romainvigier.fr', 'appindicatorsupport@rgcjonas.gmail.com', 'background-logo@fedorahosted.org']
-favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'org.mozilla.firefox.desktop', 'brave-browser.desktop', 'code.desktop', 'com.spotify.Client.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'org.mozilla.firefox.desktop', 'code.desktop', 'com.spotify.Client.desktop']
 
 [org.gnome.shell.extensions.nightthemeswitcher.cursor-variants]
 day='Adwaita'

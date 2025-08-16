@@ -21,22 +21,17 @@ modules:
   - type: dnf
     repos:
       keys:
-        - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
         - https://packages.microsoft.com/keys/microsoft.asc
       files:
-        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr: 
         - atim/starship
         - atim/bottom
       nonfree: rpmfusion
       cleanup: true
-    optfix:
-      - brave.com
     install:
       packages:
         - terra-release
-        - brave-browser
         - flatpak
         - dnf-plugins-core
         - fish
@@ -57,6 +52,7 @@ modules:
         - chezmoi
         - zoxide
         - fzf
+        - chromium
     remove:
       packages:
         - gnome-tour
