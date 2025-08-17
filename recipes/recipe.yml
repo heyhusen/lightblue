@@ -71,6 +71,7 @@ modules:
         - tableplus
         - libva-utils
         - radeontop
+        - zed
     remove:
       packages:
         - gnome-tour
