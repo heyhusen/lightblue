@@ -15,9 +15,9 @@ modules:
   - type: files
     files:
       - source: system
-        destination: / # copies files/system/* (* means everything inside it) 
+        destination: / # copies files/system/* (* means everything inside it)
         # into your image's root folder /
-        
+
   - type: dnf
     repos:
       keys:
@@ -26,12 +26,14 @@ modules:
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
         - https://yum.tableplus.com/rpm/x86_64/tableplus.repo
-      copr: 
+      copr:
         - atim/starship
         - atim/bottom
         - jdxcode/mise
       nonfree: rpmfusion
       cleanup: true
+    optfix:
+      - tableplus
     replace:
       - from-repo: rpmfusion-free
         packages:
@@ -99,6 +101,7 @@ modules:
     scripts:
       - remove-unused-repo.sh
       - disable-layering.sh
+      - update-tableplus-desktop-entry.sh
 
   - type: fonts
     fonts:
@@ -126,5 +129,5 @@ modules:
     file-conflict-policy: replace
     disable-update: true
 
-  - type: signing # this sets up the proper policy & signing files for signed 
+  - type: signing # this sets up the proper policy & signing files for signed
     # images to work fully
