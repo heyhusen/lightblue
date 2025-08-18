@@ -72,7 +72,6 @@ modules:
         - libva-utils
         - radeontop
         - zed
-        - devpod
     remove:
       packages:
         - gnome-tour
