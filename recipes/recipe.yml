@@ -29,6 +29,7 @@ modules:
       copr: 
         - atim/starship
         - atim/bottom
+        - jdxcode/mise
       nonfree: rpmfusion
       cleanup: true
     replace:
@@ -72,6 +73,7 @@ modules:
         - libva-utils
         - radeontop
         - zed
+        - mise
     remove:
       packages:
         - gnome-tour
