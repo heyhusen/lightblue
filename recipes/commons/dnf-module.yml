@@ -1,0 +1,81 @@
+modules:
+  # Packages
+  - type: dnf
+    repos:
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+      copr:
+        - atim/starship
+        - atim/bottom
+        - jdxcode/mise
+        - dejan/lazygit
+        - lihaohong/yazi
+        - rivenirvana/lazydocker
+      nonfree: rpmfusion
+      cleanup: true
+    install:
+      packages:
+        # System
+        - terra-release
+        - flatpak
+        - dnf-plugins-core
+        # CLI
+        - fish
+        - gitui
+        - bat
+        - starship
+        - bottom
+        - fastfetch
+        - docker
+        - docker-compose
+        - helix
+        - chezmoi
+        - zoxide
+        - fzf
+        - mise
+        - lazygit
+        - yazi
+        - ripgrep
+        - fd-find
+        - jq
+        - resvg
+        - eza
+        - btop
+        - lazydocker
+        ## GUI
+        - mpv
+        - code
+        - discord
+        - chromium
+        - persepolis
+        - zed
+    remove:
+      packages:
+        - fedora-third-party
+        - fedora-flathub-remote
+        - fedora-workstation-repositories
+      auto-remove: true
+
+  # Media & Hardware Video Acceleration
+  - type: dnf
+    repos:
+      nonfree: rpmfusion
+      cleanup: true
+    replace:
+      - from-repo: rpmfusion-free
+        packages:
+          - old: mesa-va-drivers
+            new: mesa-va-drivers-freeworld
+          - old: mesa-vdpau-drivers
+            new: mesa-vdpau-drivers-freeworld
+      - from-repo: rpmfusion-free
+        allow-erasing: true
+        packages:
+          - old: ffmpeg-free
+            new: ffmpeg
+    install:
+      packages:
+        - libva-utils
+        - radeontop

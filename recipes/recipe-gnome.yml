@@ -1,0 +1,24 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: lightblue
+# description will be included in the image's metadata
+description: My customized immutable system based on Fedora Silverblue.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: quay.io/fedora-ostree-desktops/silverblue
+image-version: 42 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - from-file: commons/file-module.yml
+  - from-file: commons/dnf-module.yml
+  - from-file: commons/gnome-module.yml
+  - from-file: commons/systemd-module.yml
+  - from-file: commons/script-module.yml
+  - from-file: commons/font-module.yml
+  - from-file: commons/flatpak-module.yml
+  - from-file: commons/gschema-module.yml
+  - from-file: commons/dotfile-module.yml
+  - from-file: commons/signing-module.yml
