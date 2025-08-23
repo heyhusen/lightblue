@@ -8,16 +8,16 @@ modules:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr:
         - atim/starship
-        - atim/bottom
         - jdxcode/mise
         - dejan/lazygit
         - lihaohong/yazi
         - rivenirvana/lazydocker
         - sneexy/zen-browser
+        - ublue-os/packages
       nonfree: rpmfusion
       cleanup: true
     optfix:
-        - zen
+      - zen
     install:
       packages:
         # System
@@ -53,6 +53,7 @@ modules:
         - persepolis
         - zed
         - zen-browser
+        - bazaar
     remove:
       packages:
         - fedora-third-party

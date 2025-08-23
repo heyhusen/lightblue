@@ -26,6 +26,7 @@ modules:
         - gnome-shell-extension-window-list
         - gnome-classic-session
         - gnome-software-rpm-ostree
+        - gnome-software
       auto-remove: true
 
   - type: gnome-extensions
