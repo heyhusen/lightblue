@@ -1,0 +1,8 @@
+modules:
+  - type: default-flatpaks
+    configurations:
+      - scope: user
+        notify: true
+        install:
+          - com.github.tchx84.Flatseal
+          - com.spotify.Client
