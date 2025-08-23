@@ -21,6 +21,7 @@ modules:
         - terra-release
         - flatpak
         - dnf-plugins-core
+
         # CLI
         - fish
         - gitui
@@ -44,6 +45,7 @@ modules:
         - eza
         - btop
         - lazydocker
+
         ## GUI
         - mpv
         - code

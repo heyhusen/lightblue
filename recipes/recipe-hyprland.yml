@@ -1,15 +1,15 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: lightblue
-description: My customized immutable system based on Fedora Silverblue.
+name: lightblue-hyprland
+description: My customized immutable system based on Fedora Atomic.
 
-base-image: quay.io/fedora-ostree-desktops/silverblue
+base-image: quay.io/fedora-ostree-desktops/base-atomic
 image-version: 42
 
 modules:
   - from-file: commons/file-module.yml
   - from-file: commons/dnf-module.yml
-  - from-file: commons/gnome-module.yml
+  - from-file: commons/hyprland-module.yml
   - from-file: commons/systemd-module.yml
   - from-file: commons/script-module.yml
   - from-file: commons/font-module.yml

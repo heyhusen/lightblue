@@ -36,6 +36,7 @@ jobs:
         recipe:
           # !! Add your recipes here
           - recipe-gnome.yml
+          - recipe-hyprland.yml
 
     steps:
       - name: Checkout repository
@@ -64,6 +65,7 @@ jobs:
       matrix:
         name:
           - lightblue
+          - lightblue-hyprland
 
     steps:
       - name: Checkout repository
@@ -78,6 +80,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: ${{ matrix.name }}.iso
+          name: ${{ matrix.name }}
           if-no-files-found: error
           retention-days: 0
           compression-level: 0

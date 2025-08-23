@@ -1,0 +1,76 @@
+modules:
+  - type: dnf
+    repos:
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+      copr:
+        - solopasha/hyprland
+      cleanup: true
+    install:
+      packages:
+        # System
+        - terra-release
+        - dbus-tools
+        - dbus-daemon
+        - polkit
+        - xfce-polkit
+        - xdg-utils
+        - xdg-desktop-portal-hyprland
+        - xdg-desktop-portal-gtk
+        - wl-clipboard
+        - cliphist
+
+        # Media
+        - playerctl
+        - pamixer
+        - pavucontrol
+        - wireplumber
+        - pipewire
+        - pulseaudio-utils
+
+        # Display
+        - brightnessctl
+
+        # Networking
+        - network-manager-applet
+        - NetworkManager-tui
+        - NetworkManager-openvpn
+        - NetworkManager-openvpn-gnome
+        - NetworkManager-openconnect
+        - NetworkManager-openconnect-gnome
+        - bluez
+        - bluez-tools
+        - blueman
+        - firewall-config
+
+        # Environment
+        - hyprland
+        - hyprpolkitagent
+        - hyprpaper
+        - hyprpicker
+        - hypridle
+        - hyprlock
+        - hyprlock
+        - hyprland-qt-support
+        - hyprutils
+        - greetd
+        - ghostty
+        - wofi
+        - waybar
+        - mako
+        - nwg-bar
+
+        # File Manager
+        - thunar
+        - thunar-archive-plugin
+        - thunar-volman
+        - xarchiver
+
+  - type: script
+    snippets:
+      - "dnf -y copr remove solopasha/hyprland"
+
+  # - type: systemd
+  #   system:
+  #     enabled:
+  #       - greetd.service
