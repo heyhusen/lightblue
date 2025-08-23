@@ -8,7 +8,6 @@ set -oue pipefail
 # Remove repository so they don't end up enabled on the final image:
 echo "Removing unused repositories"
 dnf -y copr remove atim/starship
-dnf -y copr remove atim/bottom
 dnf -y copr remove jdxcode/mise
 dnf -y copr remove dejan/lazygit
 dnf -y copr remove lihaohong/yazi
