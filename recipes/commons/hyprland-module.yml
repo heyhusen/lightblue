@@ -31,6 +31,7 @@ modules:
         - plymouth-system-theme
         - greetd
         - greetd-selinux
+        - tuigreet
 
         # Media
         - playerctl
