@@ -19,6 +19,18 @@ modules:
         - xdg-desktop-portal-gtk
         - wl-clipboard
         - cliphist
+        - fprintd-pam
+        - gnome-keyring-pam
+        - gnome-themes-extra
+        - grim
+        - gvfs
+        - gvfs-smb
+        - imv
+        - pinentry-gnome3
+        - wev
+        - plymouth-system-theme
+        - greetd
+        - greetd-selinux
 
         # Media
         - playerctl
@@ -30,13 +42,16 @@ modules:
 
         # Display
         - brightnessctl
+        - kanshi
+
+        # Screenshot
+        - slurp
+        - grim
 
         # Networking
         - network-manager-applet
         - NetworkManager-tui
-        - NetworkManager-openvpn
         - NetworkManager-openvpn-gnome
-        - NetworkManager-openconnect
         - NetworkManager-openconnect-gnome
         - bluez
         - bluez-tools
@@ -53,7 +68,6 @@ modules:
         - hyprlock
         - hyprland-qt-support
         - hyprutils
-        - greetd
         - ghostty
         - wofi
         - waybar
@@ -65,12 +79,15 @@ modules:
         - thunar-archive-plugin
         - thunar-volman
         - xarchiver
+    remove:
+      packages:
+        - kitty
 
   - type: script
     snippets:
       - "dnf -y copr remove solopasha/hyprland"
 
-  # - type: systemd
-  #   system:
-  #     enabled:
-  #       - greetd.service
+  - type: systemd
+    system:
+      enabled:
+        - greetd.service
