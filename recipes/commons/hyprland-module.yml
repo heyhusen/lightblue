@@ -5,6 +5,7 @@ modules:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr:
         - solopasha/hyprland
+        - errornointernet/walker
       cleanup: true
     install:
       packages:
@@ -31,6 +32,7 @@ modules:
         - plymouth-system-theme
         - greetd
         - greetd-selinux
+        - tuigreet
 
         # Media
         - playerctl
@@ -73,6 +75,8 @@ modules:
         - waybar
         - mako
         - nwg-bar
+        - elephant
+        - walker
 
         # File Manager
         - thunar
@@ -86,6 +90,7 @@ modules:
   - type: script
     snippets:
       - "dnf -y copr remove solopasha/hyprland"
+      - "dnf -y copr remove errornointernet/walker"
 
   - type: systemd
     system:
