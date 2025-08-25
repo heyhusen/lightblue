@@ -24,10 +24,8 @@ modules:
 
         # CLI
         - fish
-        - gitui
         - bat
         - starship
-        - bottom
         - fastfetch
         - docker
         - docker-compose
