@@ -5,7 +5,6 @@ modules:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr:
         - solopasha/hyprland
-        - codelovr/swayosd
       cleanup: true
     install:
       packages:
@@ -76,7 +75,7 @@ modules:
         - waybar
         - SwayNotificationCenter
         - nwg-bar
-        - swayosd-git
+        - wob
 
         # File Manager
         - thunar
@@ -90,13 +89,11 @@ modules:
   - type: script
     snippets:
       - "dnf -y copr remove solopasha/hyprland"
-      - "dnf -y copr remove codelovr/swayosd"
 
   - type: systemd
     system:
       enabled:
         - greetd.service
-        - swayosd-libinput-backend.service
     user:
       enabled:
         - darkman.service
