@@ -5,6 +5,7 @@ modules:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr:
         - solopasha/hyprland
+        - erikreider/SwayNotificationCenter
       cleanup: true
     install:
       packages:
@@ -73,9 +74,11 @@ modules:
         - ghostty
         - wofi
         - waybar
-        - SwayNotificationCenter
         - wlogout
         - wob
+        - repo: copr:copr.fedorainfracloud.org:erikreider:SwayNotificationCenter
+          packages:
+            - SwayNotificationCenter
 
         # File Manager
         - thunar
@@ -89,6 +92,7 @@ modules:
   - type: script
     snippets:
       - "dnf -y copr remove solopasha/hyprland"
+      - "dnf -y copr remove erikreider/SwayNotificationCenter"
 
   - type: systemd
     system:
