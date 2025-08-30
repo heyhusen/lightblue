@@ -74,7 +74,7 @@ modules:
         - wofi
         - waybar
         - SwayNotificationCenter
-        - nwg-bar
+        - wlogout
         - wob
 
         # File Manager
