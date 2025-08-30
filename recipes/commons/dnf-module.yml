@@ -8,11 +8,11 @@ modules:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr:
         - atim/starship
-        - atim/bottom
         - jdxcode/mise
         - dejan/lazygit
         - lihaohong/yazi
         - rivenirvana/lazydocker
+        - ublue-os/packages
       nonfree: rpmfusion
       cleanup: true
     install:
@@ -51,6 +51,7 @@ modules:
         - chromium
         - persepolis
         - zed
+        - bazaar
     remove:
       packages:
         - fedora-third-party
