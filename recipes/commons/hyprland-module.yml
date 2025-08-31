@@ -50,6 +50,7 @@ modules:
         # Screenshot
         - slurp
         - grim
+        - hyprshot
 
         # Networking
         - network-manager-applet
