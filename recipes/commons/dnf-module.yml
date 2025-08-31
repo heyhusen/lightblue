@@ -47,7 +47,6 @@ modules:
         ## GUI
         - mpv
         - code
-        - discord
         - chromium
         - persepolis
         - zed
