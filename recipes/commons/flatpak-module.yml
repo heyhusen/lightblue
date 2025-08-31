@@ -5,4 +5,5 @@ modules:
         notify: true
         install:
           - com.github.tchx84.Flatseal
+          - com.discordapp.Discord
           - com.spotify.Client
