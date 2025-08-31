@@ -6,4 +6,5 @@ modules:
         install:
           - com.github.tchx84.Flatseal
           - com.discordapp.Discord
+          - org.telegram.desktop
           - com.spotify.Client
