@@ -13,6 +13,7 @@ modules:
         - dejan/lazygit
         - lihaohong/yazi
         - rivenirvana/lazydocker
+        - sneexy/zen-browser
       nonfree: rpmfusion
       cleanup: true
     install:
@@ -50,6 +51,7 @@ modules:
         - chromium
         - persepolis
         - zed
+        - zen-browser
     remove:
       packages:
         - fedora-third-party
