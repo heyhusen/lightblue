@@ -16,6 +16,8 @@ modules:
         - sneexy/zen-browser
       nonfree: rpmfusion
       cleanup: true
+    optfix:
+        - zen
     install:
       packages:
         # System
