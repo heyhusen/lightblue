@@ -16,6 +16,7 @@ modules:
         - polkit
         - xfce-polkit
         - xdg-utils
+        - xdg-user-dirs
         - xdg-desktop-portal-hyprland
         - xdg-desktop-portal-gtk
         - wl-clipboard
