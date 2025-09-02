@@ -6,6 +6,7 @@ modules:
       copr:
         - solopasha/hyprland
         - erikreider/SwayNotificationCenter
+        - codelovr/swayosd
       cleanup: true
     install:
       packages:
@@ -77,7 +78,7 @@ modules:
         - wofi
         - waybar
         - wlogout
-        - wob
+        - swayosd-git
         - repo: copr:copr.fedorainfracloud.org:erikreider:SwayNotificationCenter
           packages:
             - SwayNotificationCenter
@@ -95,11 +96,13 @@ modules:
     snippets:
       - "dnf -y copr remove solopasha/hyprland"
       - "dnf -y copr remove erikreider/SwayNotificationCenter"
+      - "dnf -y copr remove codelovr/swayosd"
 
   - type: systemd
     system:
       enabled:
         - greetd.service
+        - swayosd-libinput-backend.service
     user:
       enabled:
         - darkman.service
