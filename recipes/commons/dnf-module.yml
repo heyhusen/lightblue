@@ -58,6 +58,7 @@ modules:
         - fedora-third-party
         - fedora-flathub-remote
         - fedora-workstation-repositories
+        - firefox
       auto-remove: true
 
   # Media & Hardware Video Acceleration
