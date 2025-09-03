@@ -8,3 +8,4 @@ modules:
           - com.discordapp.Discord
           - org.telegram.desktop
           - com.spotify.Client
+          - io.github.ungoogled_software.ungoogled_chromium
