@@ -50,7 +50,6 @@ modules:
         ## GUI
         - mpv
         - code
-        - chromium
         - persepolis
         - zed
         - zen-browser
