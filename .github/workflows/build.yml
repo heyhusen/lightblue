@@ -51,6 +51,7 @@ jobs:
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
           skip_checkout: true # we already checked out the repository
+          rechunk: true
 
           # enabled by default, disable if your image is small and you want faster builds
           maximize_build_space: false
@@ -59,7 +60,7 @@ jobs:
     name: Build ISO
     runs-on: ubuntu-24.04
     needs: build
-    if: github.event_name != 'pull_request'
+    # if: github.event_name != 'pull_request'
 
     strategy:
       matrix:
@@ -74,7 +75,7 @@ jobs:
       - name: Build ISO
         run: |
           bash <(curl -s https://raw.githubusercontent.com/blue-build/cli/main/install.sh)
-          bluebuild generate-iso --iso-name ${{ matrix.name }}.iso image ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}
+          bluebuild generate-iso --iso-name ${{ matrix.name }}.iso image ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}:pr-46-42
 
       - name: Upload disk image to Job Artifacts
         uses: actions/upload-artifact@v4
