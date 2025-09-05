@@ -15,7 +15,6 @@ modules:
 
         # Gnome Extension
         - gnome-shell-extension-appindicator
-        - gnome-shell-extension-pop-shell
     remove:
       packages:
         - gnome-tour
