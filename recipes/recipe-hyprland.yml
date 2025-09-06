@@ -9,6 +9,7 @@ image-version: 42
 modules:
   - from-file: commons/file-module.yml
   - from-file: commons/dnf-module.yml
+  - from-file: commons/amd-module.yml
   - from-file: commons/hyprland-module.yml
   - from-file: commons/systemd-module.yml
   - from-file: commons/script-module.yml

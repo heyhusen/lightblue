@@ -1,0 +1,16 @@
+modules:
+  - type: dnf
+    repos:
+      nonfree: rpmfusion
+      cleanup: true
+    replace:
+      - from-repo: rpmfusion-free
+        packages:
+          - old: mesa-va-drivers
+            new: mesa-va-drivers-freeworld
+          - old: mesa-vdpau-drivers
+            new: mesa-vdpau-drivers-freeworld
+    install:
+      packages:
+        - libva-utils
+        - radeontop
