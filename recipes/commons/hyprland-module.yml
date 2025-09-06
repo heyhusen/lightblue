@@ -71,7 +71,7 @@ modules:
         - hyprpicker
         - hypridle
         - hyprlock
-        - hyprlock
+        - hyprsunset
         - hyprland-qt-support
         - hyprutils
         - ghostty
