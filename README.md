@@ -20,29 +20,38 @@ could build my own immutability system to my liking. So, I made this.
 [unofficial image](https://gitlab.com/fedora/ostree/ci-test) for Fedora bootable
 container. Use at your own risk.
 
-## Features
+## Variant
 
-This is essentially just a vanilla version of Fedora Silverblue. I didn't change
-the theme or wallpaper. However, I did make a few changes:
+| Image                                     | Base                                        | DE / TWM  | Driver  |
+| ----------------------------------------- | ------------------------------------------- | --------- | ------- |
+| ghcr.io/heyhusen/lightblue                | quay.io/fedora-ostree-desktops/silverblue   | Gnome     | AMD     |
+| ghcr.io/heyhusen/lightblue-hyprland       | quay.io/fedora-ostree-desktops/base-atomic  | Hyprland  | AMD     |
+| ghcr.io/heyhusen/lightblue-intel          | quay.io/fedora-ostree-desktops/silverblue   | Gnome     | Intel   |
+| ghcr.io/heyhusen/lightblue-hyprland-intel | quay.io/fedora-ostree-desktops/base-atomic  | Hyprland  | Intel   |
+
+## Features
 
 - Remove unnecessary repositories, software and gnome extension
 - Disable layering (with `rpm-ostree`)
+- Install additional media codec from [RPM Fusion](https://rpmfusion.org/Howto/Multimedia?highlight=%28%5CbCategoryHowto%5Cb%29)
 - Enable hardware video acceleration (with VAAPI)
-- Install `helix` as main text editor, also `zed` and `vscode` for the rest
+- Install `helix` as main text editor, also `zed` and `vscode` for heavier task
 - Install `mise` for manage per project tools
 - Install `docker` and `compose` for devcontainer
-- Keep `firefox` as main browser, and add `chromium` for web development
+- Replace `firefox` with `zen` as main browser
 - Install Noto Sans and JetBrains Mono Nerd Font
 - Apply Tokyo Night theme to every app (if it possible)
 - Set up my [dotfiles](https://github.com/heyhusen/dotfiles) automatically
 
 ## Installation
 
-This image is based on Fedora Silverblue 42. So, make sure you already had that
-version installed.
+This image is based on Fedora Atomic 42. So, make sure you already had that
+version installed. Any variant should work.
 
 This repo will build images daily. So, if you want to update your system, simply
 change the image tag to any available tag on [packages](https://github.com/heyhusen?tab=packages&repo_name=lightblue).
+
+> After every each step bellow, your device will restart.
 
 1.  First rebase to the unsigned image, to get the proper signing keys and
 policies installed:
@@ -55,7 +64,6 @@ policies installed:
   ```sh
   sudo bootc switch --enforce-container-sigpolicy --apply ghcr.io/heyhusen/lightblue:42
   ```
-> After every each step above, your device will restart.
 
 ### Post Install (Optional)
 
@@ -74,6 +82,11 @@ sudo usermod -aG docker $USER
 ```
 
 > After that, restart your device.
+
+## Update
+This is one of the advantages of Fedora Atomic. The update method is the same as
+the installation method described above. Simply chose the version you wish to
+update to.
 
 ## Verification
 
