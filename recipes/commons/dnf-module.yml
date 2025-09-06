@@ -61,24 +61,14 @@ modules:
         - firefox
       auto-remove: true
 
-  # Media & Hardware Video Acceleration
+  # Media Codec
   - type: dnf
     repos:
       nonfree: rpmfusion
       cleanup: true
     replace:
       - from-repo: rpmfusion-free
-        packages:
-          - old: mesa-va-drivers
-            new: mesa-va-drivers-freeworld
-          - old: mesa-vdpau-drivers
-            new: mesa-vdpau-drivers-freeworld
-      - from-repo: rpmfusion-free
         allow-erasing: true
         packages:
           - old: ffmpeg-free
             new: ffmpeg
-    install:
-      packages:
-        - libva-utils
-        - radeontop
