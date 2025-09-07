@@ -1,0 +1,140 @@
+name: Daily Update Check
+
+on:
+  schedule:
+    # Every Sunday 00:00 UTC+7 (Asia/Jakarta) == Saturday 17:00 UTC
+    - cron: "0 17 * * 6"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/daily.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/daily.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Check updates on ${{ matrix.fedora }}
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        fedora:
+          - lightblue
+          - lightblue-hyprland
+          - lightblue-intel
+          - lightblue-hyprland-intel
+    container:
+      image: ghcr.io/${{ github.repository_owner }}/${{ matrix.fedora }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Refresh metadata
+        run: dnf -y --refresh makecache
+
+      - name: Setup repositories
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          cp ./files/system/etc/yum.repos.d/* /etc/yum.repos.d/
+
+          rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+          dnf install --nogpgcheck --repofrompath \
+            'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+
+          dnf -y copr enable atim/starship
+          dnf -y copr enable atim/bottom
+          dnf -y copr enable jdxcode/mise
+          dnf -y copr enable dejan/lazygit
+          dnf -y copr enable lihaohong/yazi
+          dnf -y copr enable rivenirvana/lazydocker
+          dnf -y copr enable sneexy/zen-browser
+          dnf -y copr enable solopasha/hyprland
+          dnf -y copr enable erikreider/SwayNotificationCenter
+          dnf -y copr enable codelovr/swayosd
+
+      - name: Parse package upgrades (old -> new)
+        id: upgrades
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Detect whether updates exist (0=no updates, 100=updates available)
+          if dnf -qy check-update; then
+            echo "has_updates=false" >> "$GITHUB_OUTPUT"
+            {
+              echo "### Fedora ${{ matrix.fedora }}"
+              echo ""
+              echo "_No updates available._"
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          else
+            code=$?
+            if [ "$code" -ne 100 ]; then
+              echo "dnf check-update failed with code $code" >&2
+              exit "$code"
+            fi
+          fi
+
+          echo "has_updates=true" >> "$GITHUB_OUTPUT"
+
+          list_file="$(mktemp)"
+          table_file="$(mktemp)"
+
+          echo "### Fedora ${{ matrix.fedora }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+
+          echo "| Package | Installed | Candidate |" > "$table_file"
+          echo "|---|---:|---:|" >> "$table_file"
+
+          dnf -q list --upgrades | awk 'NR>1 {print $1, $2}' | while read -r nevra newver; do
+            name="${nevra%%.*}"
+            oldver="$(rpm -q --qf '%{VERSION}-%{RELEASE}\n' "$name" 2>/dev/null || echo '?')"
+            printf '%s: %s -> %s\n' "$name" "$oldver" "$newver" >> "$list_file"
+            printf '| %s | %s | %s |\n' "$name" "$oldver" "$newver" >> "$table_file"
+          done
+
+          {
+            echo "upgrade_list<<'EOF'"
+            cat "$list_file"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+          cat "$table_file" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Show concise list in logs
+        if: steps.upgrades.outputs.has_updates == 'true'
+        run: |
+          echo "== Upgrades detected on Fedora ${{ matrix.fedora }} =="
+          echo "${{ steps.upgrades.outputs.upgrade_list }}"
+
+      - name: Security advisories (if any)
+        if: steps.upgrades.outputs.has_updates == 'true'
+        run: |
+          echo ""
+          echo "== Security update summary =="
+          dnf -y updateinfo summary || true
+          echo ""
+          echo "== Security updates available =="
+          dnf -y updateinfo list security --available || true
+
+  build:
+    name: Trigger build
+    needs: check
+    if: needs.check.outputs.has_updates == 'true'
+    uses: ./.github/workflows/build.yml
+    secrets: inherit
+
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
