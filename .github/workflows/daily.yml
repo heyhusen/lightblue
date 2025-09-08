@@ -1,9 +1,9 @@
-name: Daily Update Check
+name: Update
 
 on:
   schedule:
     # Every Sunday 00:00 UTC+7 (Asia/Jakarta) == Saturday 17:00 UTC
-    - cron: "0 17 * * 6"
+    - cron: "0 17 * * *"
   push:
     branches:
       - main
@@ -31,6 +31,8 @@ jobs:
           - lightblue-hyprland-intel
     container:
       image: ghcr.io/${{ github.repository_owner }}/${{ matrix.fedora }}
+    outputs:
+      has_updates: ${{ steps.upgrades.outputs.has_updates }}
 
     steps:
       - name: Checkout repository
@@ -104,7 +106,7 @@ jobs:
           done
 
           {
-            echo "upgrade_list<<'EOF'"
+            echo "upgrade_list<<EOF"
             cat "$list_file"
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
