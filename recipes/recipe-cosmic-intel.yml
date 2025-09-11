@@ -1,0 +1,20 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: lightblue-cosmic-intel
+description: My customized immutable system based on Fedora Cosmic.
+
+base-image: quay.io/fedora-ostree-desktops/cosmic-atomic
+image-version: 42
+
+modules:
+  - from-file: commons/file-module.yml
+  - from-file: commons/dnf-module.yml
+  - from-file: commons/intel-module.yml
+  # - from-file: commons/cosmic-module.yml
+  - from-file: commons/systemd-module.yml
+  - from-file: commons/script-module.yml
+  - from-file: commons/font-module.yml
+  - from-file: commons/flatpak-module.yml
+  - from-file: commons/gschema-module.yml
+  - from-file: commons/dotfile-module.yml
+  - from-file: commons/signing-module.yml

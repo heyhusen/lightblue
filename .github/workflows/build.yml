@@ -34,8 +34,10 @@ jobs:
           # !! Add your recipes here
           - recipe-gnome.yml
           - recipe-hyprland.yml
+          - recipe-cosmic.yml
           - recipe-gnome-intel.yml
           - recipe-hyprland-intel.yml
+          - recipe-cosmic-intel.yml
 
     steps:
       - name: Checkout repository
@@ -65,8 +67,10 @@ jobs:
         name:
           - lightblue
           - lightblue-hyprland
+          - lightblue-cosmic
           - lightblue-intel
           - lightblue-hyprland-intel
+          - lightblue-cosmic-intel
 
     steps:
       - name: Checkout repository
