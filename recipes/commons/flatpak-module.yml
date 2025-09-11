@@ -5,8 +5,4 @@ modules:
         notify: true
         install:
           - com.github.tchx84.Flatseal
-          - com.discordapp.Discord
-          - org.telegram.desktop
           - com.spotify.Client
-          - io.github.ungoogled_software.ungoogled_chromium
-          - io.gitlab.librewolf-community
