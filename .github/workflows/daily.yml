@@ -56,7 +56,6 @@ jobs:
             'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
           dnf -y copr enable atim/starship
-          dnf -y copr enable atim/bottom
           dnf -y copr enable jdxcode/mise
           dnf -y copr enable dejan/lazygit
           dnf -y copr enable lihaohong/yazi
