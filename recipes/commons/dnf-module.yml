@@ -8,7 +8,6 @@ modules:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr:
         - atim/starship
-        - atim/bottom
         - jdxcode/mise
         - dejan/lazygit
         - lihaohong/yazi
