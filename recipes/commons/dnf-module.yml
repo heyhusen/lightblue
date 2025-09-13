@@ -46,6 +46,7 @@ modules:
         - eza
         - btop
         - lazydocker
+        - zellij
 
         ## GUI
         - mpv
