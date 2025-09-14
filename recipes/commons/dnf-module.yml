@@ -23,6 +23,9 @@ modules:
         - terra-release
         - flatpak
         - dnf-plugins-core
+        - gnome-themes-extra
+        - sassc
+        - gtk-murrine-engine
 
         # CLI
         - fish
