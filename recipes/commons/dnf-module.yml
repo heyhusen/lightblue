@@ -46,6 +46,7 @@ modules:
         - btop
         - lazydocker
         - zellij
+        - darkman
 
         ## GUI
         - mpv
