@@ -28,6 +28,3 @@ modules:
         - gnome-software-rpm-ostree
       auto-remove: true
 
-  - type: gnome-extensions
-    install:
-      - Night Theme Switcher
