@@ -81,6 +81,7 @@ modules:
         - repo: copr:copr.fedorainfracloud.org:erikreider:SwayNotificationCenter
           packages:
             - SwayNotificationCenter
+        - sway-audio-idle-inhibit
 
         # File Manager
         - thunar
