@@ -15,6 +15,7 @@ modules:
 
         # Gnome Extension
         - gnome-shell-extension-appindicator
+        - gnome-shell-extension-forge
     remove:
       packages:
         - gnome-tour
