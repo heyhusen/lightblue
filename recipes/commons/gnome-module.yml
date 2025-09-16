@@ -29,3 +29,6 @@ modules:
         - gnome-software-rpm-ostree
       auto-remove: true
 
+  - type: gnome-extensions
+    install:
+      - 5090 # Space Bar
