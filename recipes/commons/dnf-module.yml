@@ -45,6 +45,7 @@ modules:
         - lazydocker
         - zellij
         - darkman
+        - distrobox
 
         ## GUI
         - mpv
