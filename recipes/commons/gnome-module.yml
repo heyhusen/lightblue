@@ -16,6 +16,7 @@ modules:
         # Gnome Extension
         - gnome-shell-extension-appindicator
         - gnome-shell-extension-forge
+        - gnome-shell-extension-blur-my-shell
     remove:
       packages:
         - gnome-tour
