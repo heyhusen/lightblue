@@ -19,7 +19,9 @@ monospace-font-name='JetBrainsMono Nerd Font 11'
 show-battery-percentage=true
 
 [org.gnome.desktop.wm.preferences]
-button-layout='appmenu:minimize,maximize,close'
+button-layout='appmenu:close'
+mouse-button-modifier='disabled'
+workspace-names=@as []
 
 [org.gnome.settings-daemon.plugins.color]
 night-light-enabled=true
@@ -27,43 +29,176 @@ night-light-last-coordinates=(-0.49482300000000001, 117.14400000000001)
 night-light-schedule-automatic=false
 night-light-schedule-from=18.0
 
+[org.gnome.mutter.keybindings]
+toggle-tiled-left=@as []
+toggle-tiled-right=@as []
+
+[org.gnome.mutter.wayland.keybindings]
+restore-shortcuts=@as []
+
 [org.gnome.settings-daemon.plugins.media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 next=['<Control><Super>Right']
 play=['<Control><Super>p']
 previous=['<Control><Super>Left']
+www=['<Super>b']
 
 [org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
 binding='<Super>Return'
-command='ptyxis'
+command='ptyxis --new-window'
 name='Terminal'
 
+[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom1]
+binding='<Super>m'
+command='flatpak run com.spotify.Client'
+name='Music'
+
+[org.gnome.desktop.wm.keybindings]
+begin-move=@as []
+begin-resize=@as []
+close=['<Super>q']
+maximize=@as []
+move-to-monitor-down=@as []
+move-to-monitor-left=@as []
+move-to-monitor-right=@as []
+move-to-monitor-up=@as []
+move-to-workspace-1=['<Shift><Super>1']
+move-to-workspace-2=['<Shift><Super>2']
+move-to-workspace-3=['<Shift><Super>3']
+move-to-workspace-4=['<Shift><Super>4']
+move-to-workspace-last=@as []
+switch-input-source=@as []
+switch-input-source-backward=@as []
+switch-to-workspace-1=['<Super>1']
+switch-to-workspace-2=['<Super>2']
+switch-to-workspace-3=['<Super>3']
+switch-to-workspace-4=['<Super>4']
+unmaximize=@as []
+
+[org.gnome.shell.extensions.blur-my-shell]
+settings-version=2
+
+[org.gnome.shell.extensions.blur-my-shell.appfolder]
+brightness=0.59999999999999998
+sigma=30
+
+[org.gnome.shell.extensions.blur-my-shell.coverflow-alt-tab]
+pipeline='pipeline_default'
+
+[org.gnome.shell.extensions.blur-my-shell.dash-to-dock]
+blur=true
+brightness=0.59999999999999998
+pipeline='pipeline_default_rounded'
+sigma=30
+static-blur=true
+style-dash-to-dock=0
+
+[org.gnome.shell.extensions.blur-my-shell.lockscreen]
+pipeline='pipeline_default'
+
+[org.gnome.shell.extensions.blur-my-shell.overview]
+pipeline='pipeline_default'
+style-components=1
+
+[org.gnome.shell.extensions.blur-my-shell.panel]
+blur=true
+brightness=0.59999999999999998
+force-light-text=false
+override-background=true
+pipeline='pipeline_default'
+sigma=30
+static-blur=true
+
+[org.gnome.shell.extensions.blur-my-shell.screenshot]
+pipeline='pipeline_default'
+
+[org.gnome.shell.extensions.blur-my-shell.window-list]
+brightness=0.59999999999999998
+sigma=30
+
+[org.gnome.shell.extensions.forge]
+css-last-update=uint32 37
+css-updated='1758114316281'
+window-gap-hidden-on-single=true
+window-gap-size=uint32 4
+window-gap-size-increment=uint32 1
+
+[org.gnome.shell.extensions.forge.keybindings]
+con-split-horizontal=['<Super>z']
+con-split-layout-toggle=['<Super>g']
+con-split-vertical=['<Super>v']
+con-stacked-layout-toggle=['<Shift><Super>s']
+con-tabbed-layout-toggle=['<Shift><Super>t']
+con-tabbed-showtab-decoration-toggle=['<Control><Alt>y']
+focus-border-toggle=['<Super>x']
+mod-mask-mouse-tile='None'
+prefs-tiling-toggle=['<Super>w']
+window-focus-down=['<Super>Down']
+window-focus-left=['<Super>Left']
+window-focus-right=['<Super>Right']
+window-focus-up=['<Super>Up']
+window-gap-size-decrease=['<Control><Super>minus']
+window-gap-size-increase=['<Control><Super>plus']
+window-move-down=['<Shift><Super>Down']
+window-move-left=['<Shift><Super>Left']
+window-move-right=['<Shift><Super>Right']
+window-move-up=['<Shift><Super>Up']
+window-resize-bottom-decrease=['<Shift><Control><Super>i']
+window-resize-bottom-increase=['<Control><Super>u']
+window-resize-left-decrease=['<Shift><Control><Super>o']
+window-resize-left-increase=['<Control><Super>y']
+window-resize-right-decrease=['<Shift><Control><Super>y']
+window-resize-right-increase=['<Control><Super>o']
+window-resize-top-decrease=['<Shift><Control><Super>u']
+window-resize-top-increase=['<Control><Super>i']
+window-snap-center=['<Control><Alt>c']
+window-snap-one-third-left=['<Control><Alt>d']
+window-snap-one-third-right=['<Control><Alt>g']
+window-snap-two-third-left=['<Control><Alt>e']
+window-snap-two-third-right=['<Control><Alt>t']
+window-swap-down=['<Control><Super>j']
+window-swap-last-active=['<Super>Return']
+window-swap-left=['<Control><Super>h']
+window-swap-right=['<Control><Super>l']
+window-swap-up=['<Control><Super>k']
+window-toggle-always-float=['<Shift><Super>c']
+window-toggle-float=['<Super>c']
+workspace-active-tile-toggle=['<Shift><Super>w']
+
+[org.gnome.shell.extensions.space-bar.appearance]
+application-styles='.space-bar {\n  -natural-hpadding: 4px;\n}\n\n.space-bar-workspace-label.active {\n  margin: 0 2px;\n  background-color: rgba(255,255,255,0.3);\n  color: rgba(255,255,255,1);\n  border-color: rgba(0,0,0,0);\n  font-weight: 700;\n  border-radius: 4px;\n  border-width: 0px;\n  padding: 3px 8px;\n}\n\n.space-bar-workspace-label.inactive {\n  margin: 0 2px;\n  background-color: rgba(0,0,0,0);\n  color: rgba(255,255,255,1);\n  border-color: rgba(0,0,0,0);\n  font-weight: 700;\n  border-radius: 4px;\n  border-width: 0px;\n  padding: 3px 8px;\n}\n\n.space-bar-workspace-label.inactive.empty {\n  margin: 0 2px;\n  background-color: rgba(0,0,0,0);\n  color: rgba(255,255,255,0.5);\n  border-color: rgba(0,0,0,0);\n  font-weight: 700;\n  border-radius: 4px;\n  border-width: 0px;\n  padding: 3px 8px;\n}'
+workspace-margin=2
+workspaces-bar-padding=4
+
+[org.gnome.shell.extensions.space-bar.behavior]
+always-show-numbers=true
+indicator-style='workspaces-bar'
+position='left'
+show-empty-workspaces=false
+toggle-overview=false
+
+[org.gnome.shell.extensions.space-bar.shortcuts]
+activate-empty-key=@as []
+activate-previous-key=@as []
+enable-activate-workspace-shortcuts=false
+move-workspace-left=@as []
+move-workspace-right=@as []
+open-menu=@as []
+
+[org.gnome.shell.extensions.space-bar.state]
+version=33
+
+[org.gnome.shell.keybindings]
+focus-active-notification=@as []
+switch-to-application-1=@as []
+switch-to-application-2=@as []
+switch-to-application-3=@as []
+switch-to-application-4=@as []
+toggle-message-tray=['<Super>n']
+
 [org.gnome.shell]
-enabled-extensions=['nightthemeswitcher@romainvigier.fr', 'appindicatorsupport@rgcjonas.gmail.com', 'background-logo@fedorahosted.org']
-favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'com.spotify.Client.desktop']
-
-[org.gnome.shell.extensions.nightthemeswitcher.cursor-variants]
-day='Adwaita'
-enabled=true
-
-[org.gnome.shell.extensions.nightthemeswitcher.gtk-variants]
-day='Adwaita'
-enabled=true
-night='Adwaita-dark'
-
-[org.gnome.shell.extensions.nightthemeswitcher.icon-variants]
-day='Adwaita'
-enabled=true
-
-[org.gnome.shell.extensions.nightthemeswitcher.shell-variants]
-enabled=true
-
-[org.gnome.shell.extensions.nightthemeswitcher.time]
-location=(-6.9159091703884261, 107.6071)
-manual-schedule=true
-nightthemeswitcher-ondemand-keybinding=['<Shift><Super>t']
-sunrise=6.0
-sunset=18.0
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'background-logo@fedorahosted.org', 'space-bar@luchrioh', 'blur-my-shell@aunetx', 'forge@jmmaranan.com']
+favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'zen-browser.desktop', 'com.spotify.Client.desktop']
 
 [org.gnome.software]
 allow-updates=false
