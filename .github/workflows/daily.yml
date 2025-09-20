@@ -97,13 +97,40 @@ jobs:
           echo "| Package | Installed | Candidate |" > "$table_file"
           echo "|---|---:|---:|" >> "$table_file"
 
-          dnf -q list --upgrades | awk 'NR>1 {print $1, $2}' | while read -r nevra newver; do
-            name="${nevra%%.*}"
-            oldver="$(rpm -q --qf '%{VERSION}-%{RELEASE}\n' "$name" 2>/dev/null || echo '?')"
-            printf '%s: %s -> %s\n' "$name" "$oldver" "$newver" >> "$list_file"
-            printf '| %s | %s | %s |\n' "$name" "$oldver" "$newver" >> "$table_file"
-          done
+          declare -A OLD NEW ARCHES
 
+          # Use process substitution to avoid subshell so the associative arrays persist
+          while read -r nevra newver; do
+            pkg="${nevra%.*}"         # base name (strip trailing .arch)
+            arch="${nevra##*.}"       # arch (x86_64, i686, noarch, etc.)
+
+             # Query installed version for this specific NEVRA
+            oldver="$(rpm -q --qf '%{VERSION}-%{RELEASE}\n' "${pkg}.${arch}" 2>/dev/null || echo '?')"
+
+             # Store versions (usually identical across arches)
+            OLD["$pkg"]="${OLD[$pkg]:-$oldver}"
+            NEW["$pkg"]="$newver"
+
+            # Safely read existing list (may be unset on first encounter)
+            cur="${ARCHES[$pkg]-}"
+            if [[ ",${cur}," != *",$arch,"* ]]; then
+              ARCHES["$pkg"]="${cur:+${cur},}$arch"
+            fi
+          done < <(dnf -q list --upgrades | awk 'NR>1 {print $1, $2}')
+
+           # Stable, sorted output by package name
+          mapfile -t _keys < <(printf '%s\n' "${!NEW[@]}" | sort)
+
+          for pkg in "${_keys[@]}"; do
+            arches="${ARCHES[$pkg]}"
+            label="$pkg (${arches})"
+            old="${OLD[$pkg]}"
+            new="${NEW[$pkg]}"
+
+            printf '%s: %s -> %s\n' "$label" "$old" "$new" >> "$list_file"
+            printf '| %s | %s | %s |\n' "$label" "$old" "$new" >> "$table_file"
+          done
+          
           {
             echo "upgrade_list<<EOF"
             cat "$list_file"
