@@ -35,7 +35,7 @@ modules:
         - greetd
         - greetd-selinux
         - tuigreet
-
+        
         # Media
         - playerctl
         - pamixer
@@ -88,6 +88,8 @@ modules:
         - thunar-archive-plugin
         - thunar-volman
         - xarchiver
+        - ffmpegthumbnailer
+        - tumbler
     remove:
       packages:
         - kitty
