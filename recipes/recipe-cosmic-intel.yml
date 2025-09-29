@@ -10,7 +10,7 @@ modules:
   - from-file: commons/file-module.yml
   - from-file: commons/dnf-module.yml
   - from-file: commons/intel-module.yml
-  # - from-file: commons/cosmic-module.yml
+  - from-file: commons/cosmic-module.yml
   - from-file: commons/systemd-module.yml
   - from-file: commons/script-module.yml
   - from-file: commons/font-module.yml
