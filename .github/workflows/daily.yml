@@ -53,7 +53,7 @@ jobs:
 
           cp ./files/system/etc/yum.repos.d/* /etc/yum.repos.d/
 
-          dnf config-manager addrepo \
+          dnf config-manager addrepo --overwrite \
             --from-repofile=https://yum.tableplus.com/rpm/x86_64/tableplus.repo
 
           dnf install --nogpgcheck --repofrompath \
