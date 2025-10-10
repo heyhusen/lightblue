@@ -48,7 +48,7 @@ container. Use at your own risk.
 This image is based on Fedora Atomic 42. So, make sure you already had that
 version installed. Any variant should work.
 
-This repo will build images daily. So, if you want to update your system, simply
+This repo will build images weekly. So, if you want to update your system, simply
 change the image tag to any available tag on [packages](https://github.com/heyhusen?tab=packages&repo_name=lightblue).
 
 > After every each step bellow, your device will restart.

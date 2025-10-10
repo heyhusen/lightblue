@@ -2,18 +2,18 @@ name: Update
 
 on:
   schedule:
-    # Every Sunday 00:00 UTC+7 (Asia/Jakarta) == Saturday 17:00 UTC
-    - cron: "0 17 * * *"
+    # Every Sunday 00:00 UTC
+    - cron: "0 0 * * 0"
   push:
     branches:
       - main
     paths:
-      - ".github/workflows/daily.yml"
+      - ".github/workflows/weekly.yml"
   pull_request:
     branches:
       - main
     paths:
-      - ".github/workflows/daily.yml"
+      - ".github/workflows/weekly.yml"
 
 permissions:
   contents: read
