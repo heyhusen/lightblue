@@ -24,6 +24,7 @@ modules:
         - terra-release
         - flatpak
         - dnf-plugins-core
+        - wireguard-tools
 
         # CLI
         - fish
