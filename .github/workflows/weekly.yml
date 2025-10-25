@@ -55,7 +55,7 @@ jobs:
           dnf config-manager addrepo --overwrite \
             --from-repofile=https://yum.tableplus.com/rpm/x86_64/tableplus.repo
 
-          dnf install --nogpgcheck --repofrompath \
+          dnf install -y --nogpgcheck --repofrompath \
             'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
           dnf -y copr enable dejan/lazygit

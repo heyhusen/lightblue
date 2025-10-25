@@ -1,14 +1,7 @@
 modules:
   - type: dnf
-    repos:
-      files:
-        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-      cleanup: true
     install:
       packages:
-        # System
-        - terra-release
-
         # GUI
         - gnome-tweaks
         - mission-center
