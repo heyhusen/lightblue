@@ -33,3 +33,4 @@ modules:
   - type: gnome-extensions
     install:
       - 5090 # Space Bar
+      - 3733 # Tiling Assistant
