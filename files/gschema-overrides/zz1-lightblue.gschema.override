@@ -19,6 +19,7 @@ monospace-font-name='JetBrainsMono Nerd Font 11'
 show-battery-percentage=true
 
 [org.gnome.desktop.wm.preferences]
+action-double-click-titlebar='none'
 button-layout='appmenu:close'
 mouse-button-modifier='disabled'
 workspace-names=@as []
@@ -41,6 +42,7 @@ custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybin
 next=['<Control><Super>Right']
 play=['<Control><Super>p']
 previous=['<Control><Super>Left']
+home=['<Super>f']
 www=['<Super>b']
 
 [org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
@@ -57,7 +59,7 @@ name='Music'
 begin-move=@as []
 begin-resize=@as []
 close=['<Super>q']
-maximize=@as []
+maximize=['<Shift><Super>Up']
 move-to-monitor-down=@as []
 move-to-monitor-left=@as []
 move-to-monitor-right=@as []
@@ -83,7 +85,11 @@ switch-to-workspace-6=['<Super>6']
 switch-to-workspace-7=['<Super>7']
 switch-to-workspace-8=['<Super>8']
 switch-to-workspace-9=['<Super>9']
-unmaximize=@as []
+switch-to-workspace-left=@as []
+switch-to-workspace-right=@as []
+switch-windows=['<Alt>Tab']
+switch-windows-backward=['<Shift><Alt>Tab']
+unmaximize=['<Shift><Super>Down']
 
 [org.gnome.shell.extensions.blur-my-shell]
 settings-version=2
@@ -204,10 +210,55 @@ switch-to-application-1=@as []
 switch-to-application-2=@as []
 switch-to-application-3=@as []
 switch-to-application-4=@as []
+toggle-application-view=['<Super>space']
 toggle-message-tray=['<Super>n']
 
+[org.gnome.shell.extensions.tiling-assistant]
+activate-layout0=@as []
+activate-layout1=@as []
+activate-layout2=@as []
+activate-layout3=@as []
+auto-tile=@as []
+center-window=@as []
+debugging-free-rects=@as []
+debugging-show-tiled-rects=@as []
+default-move-mode=0
+dynamic-keybinding-behavior=0
+enable-advanced-experimental-features=false
+focus-hint=0
+focus-hint-color='rgb(53,132,228)'
+import-layout-examples=false
+last-version-installed=53
+overridden-settings={'org.gnome.mutter.edge-tiling': <true>}
+restore-window=@as []
+search-popup-layout=@as []
+single-screen-gap=0
+tile-bottom-half=@as []
+tile-bottom-half-ignore-ta=@as []
+tile-bottomleft-quarter=['<Shift><Super>j']
+tile-bottomleft-quarter-ignore-ta=@as []
+tile-bottomright-quarter=['<Shift><Super>k']
+tile-bottomright-quarter-ignore-ta=@as []
+tile-edit-mode=@as []
+tile-left-half=@as []
+tile-left-half-ignore-ta=@as []
+tile-maximize=@as []
+tile-maximize-horizontally=@as []
+tile-maximize-vertically=@as []
+tile-right-half=@as []
+tile-right-half-ignore-ta=@as []
+tile-top-half=@as []
+tile-top-half-ignore-ta=@as []
+tile-topleft-quarter=['<Shift><Super>i']
+tile-topleft-quarter-ignore-ta=@as []
+tile-topright-quarter=['<Shift><Super>l']
+tile-topright-quarter-ignore-ta=@as []
+toggle-always-on-top=@as []
+toggle-tiling-popup=@as []
+window-gap=0
+
 [org.gnome.shell]
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'background-logo@fedorahosted.org', 'space-bar@luchrioh', 'blur-my-shell@aunetx', 'forge@jmmaranan.com']
+enabled-extensions=['nightthemeswitcher@romainvigier.fr', 'appindicatorsupport@rgcjonas.gmail.com', 'background-logo@fedorahosted.org', 'forge@jmmaranan.com', 'blur-my-shell@aunetx', 'space-bar@luchrioh', 'no-overview@fthx', 'tiling-assistant@leleat-on-github']
 favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'zen-browser.desktop', 'com.spotify.Client.desktop']
 
 [org.gnome.software]
