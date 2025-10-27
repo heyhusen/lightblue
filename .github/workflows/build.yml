@@ -82,7 +82,7 @@ jobs:
           bluebuild generate-iso --iso-name ${{ matrix.name }}.iso image ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}
 
       - name: Upload disk image to Job Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           path: ${{ matrix.name }}.iso
           name: ${{ matrix.name }}
