@@ -4,7 +4,7 @@ name: lightblue-cosmic-intel
 description: My customized immutable system based on Fedora Cosmic.
 
 base-image: quay.io/fedora-ostree-desktops/cosmic-atomic
-image-version: 42
+image-version: 43
 
 modules:
   - from-file: commons/file-module.yml
