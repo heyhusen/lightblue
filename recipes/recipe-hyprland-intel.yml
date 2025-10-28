@@ -4,7 +4,7 @@ name: lightblue-hyprland-intel
 description: My customized immutable system based on Fedora Atomic.
 
 base-image: quay.io/fedora-ostree-desktops/base-atomic
-image-version: 42
+image-version: 43
 
 modules:
   - from-file: commons/file-module.yml
