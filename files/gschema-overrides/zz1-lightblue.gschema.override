@@ -38,7 +38,7 @@ toggle-tiled-right=@as []
 restore-shortcuts=@as []
 
 [org.gnome.settings-daemon.plugins.media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
 next=['<Control><Super>Right']
 play=['<Control><Super>p']
 previous=['<Control><Super>Left']
@@ -54,6 +54,11 @@ name='Terminal'
 binding='<Super>m'
 command='flatpak run com.spotify.Client'
 name='Music'
+
+[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom2]
+binding='<Super>space'
+command='wofi --show drun'
+name='Launcher'
 
 [org.gnome.desktop.wm.keybindings]
 begin-move=@as []

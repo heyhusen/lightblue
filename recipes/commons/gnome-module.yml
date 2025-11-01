@@ -6,6 +6,9 @@ modules:
         - gnome-tweaks
         - mission-center
 
+        # CLI
+        - wofi
+
         # Gnome Extension
         - gnome-shell-extension-appindicator
         - gnome-shell-extension-blur-my-shell
