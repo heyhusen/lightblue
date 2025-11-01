@@ -27,3 +27,4 @@ modules:
     install:
       - 5090 # Space Bar
       - 3733 # Tiling Assistant
+      - 5489 # Search Light
