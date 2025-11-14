@@ -5,4 +5,5 @@ modules:
         notify: true
         install:
           - com.github.tchx84.Flatseal
+          - app.zen_browser.zen
           - com.spotify.Client

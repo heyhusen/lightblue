@@ -11,5 +11,4 @@ dnf -y remove terra-release
 dnf -y copr remove dejan/lazygit
 dnf -y copr remove lihaohong/yazi
 dnf -y copr remove rivenirvana/lazydocker
-dnf -y copr remove sneexy/zen-browser
 rm /etc/yum.repos.d/vscode.repo

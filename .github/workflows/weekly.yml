@@ -61,7 +61,6 @@ jobs:
           dnf -y copr enable dejan/lazygit
           dnf -y copr enable lihaohong/yazi
           dnf -y copr enable rivenirvana/lazydocker
-          dnf -y copr enable sneexy/zen-browser
           dnf -y copr enable solopasha/hyprland
           dnf -y copr enable erikreider/SwayNotificationCenter
           dnf -y copr enable codelovr/swayosd
