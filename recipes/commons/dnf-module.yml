@@ -15,11 +15,9 @@ modules:
         - dejan/lazygit
         - lihaohong/yazi
         - rivenirvana/lazydocker
-        - sneexy/zen-browser
       nonfree: rpmfusion
       cleanup: true
     optfix:
-        - zen
         - tableplus
     install:
       packages:
@@ -57,7 +55,6 @@ modules:
         - code
         - persepolis
         - zed
-        - zen-browser
         - tableplus
     remove:
       packages:
