@@ -17,6 +17,7 @@ gtk-theme='Adwaita'
 icon-theme='Adwaita'
 monospace-font-name='JetBrainsMono Nerd Font 11'
 show-battery-percentage=true
+enable-hot-corners=false
 
 [org.gnome.desktop.wm.preferences]
 action-double-click-titlebar='none'
