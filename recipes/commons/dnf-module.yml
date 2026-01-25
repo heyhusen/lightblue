@@ -57,6 +57,7 @@ modules:
         - zed
         - tableplus
         - antigravity
+        - kubectl
     remove:
       packages:
         - fedora-third-party
