@@ -12,3 +12,4 @@ dnf -y copr remove dejan/lazygit
 dnf -y copr remove lihaohong/yazi
 dnf -y copr remove rivenirvana/lazydocker
 rm /etc/yum.repos.d/vscode.repo
+rm /etc/yum.repos.d/antigravity.repo
