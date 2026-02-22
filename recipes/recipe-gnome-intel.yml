@@ -3,7 +3,7 @@
 name: lightblue-intel
 description: My customized immutable system based on Fedora Silverblue.
 
-base-image: quay.io/fedora-ostree-desktops/silverblue
+base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 43
 
 modules:
