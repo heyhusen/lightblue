@@ -267,7 +267,7 @@ saturation=0.69999999999999996
 toggle-shortcut=['<Super>g']
 
 [org.gnome.shell]
-enabled-extensions=['nightthemeswitcher@romainvigier.fr', 'appindicatorsupport@rgcjonas.gmail.com', 'background-logo@fedorahosted.org', 'forge@jmmaranan.com', 'blur-my-shell@aunetx', 'space-bar@luchrioh', 'no-overview@fthx', 'tiling-assistant@leleat-on-github', 'search-light@icedman.github.com', 'dim-background-windows@stephane-13.github.com']
+enabled-extensions=['nightthemeswitcher@romainvigier.fr', 'appindicatorsupport@rgcjonas.gmail.com', 'background-logo@fedorahosted.org', 'forge@jmmaranan.com', 'blur-my-shell@aunetx', 'space-bar@luchrioh', 'no-overview@fthx', 'tiling-assistant@leleat-on-github', 'search-light@icedman.github.com', 'dim-background-windows@stephane-13.github.com', 'gsconnect@andyholmes.github.io']
 favorite-apps=['org.gnome.Nautilus.desktop', 'org.gnome.Ptyxis.desktop', 'app.zen_browser.zen.desktop', 'com.spotify.Client.desktop']
 
 [org.gnome.software]
