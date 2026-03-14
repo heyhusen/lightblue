@@ -2,6 +2,11 @@ modules:
   - type: dnf
     install:
       packages:
+        # System
+        - nautilus-python
+        - nautilus-extensions
+        - nautilus-gsconnect
+
         # GUI
         - gnome-tweaks
         - mission-center
@@ -10,6 +15,7 @@ modules:
         - gnome-shell-extension-appindicator
         - gnome-shell-extension-blur-my-shell
         - gnome-shell-extension-no-overview
+        - gnome-shell-extension-gsconnect
     remove:
       packages:
         - gnome-tour
@@ -27,4 +33,4 @@ modules:
     install:
       - 5090 # Space Bar
       - 3733 # Tiling Assistant
-      - 6313 # Dim Background Windows
+      - 6313 # Dim Background Windowsu
