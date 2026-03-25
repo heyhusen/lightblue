@@ -5,6 +5,4 @@ modules:
       cleanup: true
     install:
       packages:
-        - intel-media-driver
-        - libva-utils
         - igt-gpu-tools
