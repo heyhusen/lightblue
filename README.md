@@ -17,23 +17,20 @@ for me. Then, I discovered [BlueBuild](https://blue-build.org/). Finally, I
 could build my own immutability system to my liking. So, I made this.
 
 > This image is based on
-[unofficial image](https://gitlab.com/fedora/ostree/ci-test) for Fedora bootable
+[Ublue's base image](https://github.com/orgs/ublue-os/packages) for Fedora bootable
 container. Use at your own risk.
 
 ## Variant
 
-| Image                                     | Base                                        | DE / TWM  | Driver  |
-| ----------------------------------------- | ------------------------------------------- | --------- | ------- |
-| ghcr.io/heyhusen/lightblue                | quay.io/fedora-ostree-desktops/silverblue   | Gnome     | AMD     |
-| ghcr.io/heyhusen/lightblue-hyprland       | quay.io/fedora-ostree-desktops/base-atomic  | Hyprland  | AMD     |
-| ghcr.io/heyhusen/lightblue-intel          | quay.io/fedora-ostree-desktops/silverblue   | Gnome     | Intel   |
-| ghcr.io/heyhusen/lightblue-hyprland-intel | quay.io/fedora-ostree-desktops/base-atomic  | Hyprland  | Intel   |
+| Image                                     | Base                                        | DE / TWM  | GPU         |
+| ----------------------------------------- | ------------------------------------------- | --------- | ----------- |
+| ghcr.io/heyhusen/lightblue                | ghcr.io/ublue-os/silverblue-main            | Gnome     | AMD / Intel |
+| ghcr.io/heyhusen/lightblue-hyprland       | ghcr.io/ublue-os/base-main                  | Hyprland  | AMD / Intel |
 
 ## Features
 
 - Remove unnecessary repositories, software and gnome extension
 - Disable layering (with `rpm-ostree`)
-- Install additional media codec from [RPM Fusion](https://rpmfusion.org/Howto/Multimedia?highlight=%28%5CbCategoryHowto%5Cb%29)
 - Enable hardware video acceleration (with VAAPI)
 - Install `helix` as main text editor, also `zed` and `vscode` for heavier task
 - Install `mise` for manage per project tools

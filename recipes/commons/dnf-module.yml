@@ -22,9 +22,7 @@ modules:
     install:
       packages:
         # System
-        - flatpak
         - dnf-plugins-core
-        - wireguard-tools
 
         # CLI
         - fish
@@ -36,13 +34,11 @@ modules:
         - helix
         - chezmoi
         - zoxide
-        - fzf
         - mise
         - lazygit
         - yazi
         - ripgrep
         - fd-find
-        - jq
         - resvg
         - eza
         - btop
@@ -64,19 +60,7 @@ modules:
         - fedora-flathub-remote
         - fedora-workstation-repositories
       auto-remove: true
-
-  # Media Codec
-  - type: dnf
-    repos:
-      nonfree: rpmfusion
-      cleanup: true
-    replace:
-      - from-repo: rpmfusion-free
-        allow-erasing: true
-        packages:
-          - old: ffmpeg-free
-            new: ffmpeg
-
+  
   - type: script
     snippets:
       - "wget -q -O - https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | K3D_INSTALL_DIR=/usr/bin bash"

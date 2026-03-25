@@ -1,6 +1,0 @@
-modules:
-  - type: dnf
-    install:
-      packages:
-        # System
-        - imv
