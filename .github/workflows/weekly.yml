@@ -26,6 +26,8 @@ jobs:
         fedora:
           - lightblue
           - lightblue-hyprland
+          - lightblue-nvidia
+          - lightblue-hyprland-nvidia
     container:
       image: ghcr.io/${{ github.repository_owner }}/${{ matrix.fedora }}
     outputs:

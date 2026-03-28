@@ -22,10 +22,12 @@ container. Use at your own risk.
 
 ## Variant
 
-| Image                                     | Base                                        | DE / TWM  | GPU         |
-| ----------------------------------------- | ------------------------------------------- | --------- | ----------- |
-| ghcr.io/heyhusen/lightblue                | ghcr.io/ublue-os/silverblue-main            | Gnome     | AMD / Intel |
-| ghcr.io/heyhusen/lightblue-hyprland       | ghcr.io/ublue-os/base-main                  | Hyprland  | AMD / Intel |
+| Image                                      | Base                                        | DE / TWM  | GPU                  |
+| ------------------------------------------ | ------------------------------------------- | --------- | -------------------- |
+| ghcr.io/heyhusen/lightblue                 | ghcr.io/ublue-os/silverblue-main            | Gnome     | AMD / Intel          |
+| ghcr.io/heyhusen/lightblue-hyprland        | ghcr.io/ublue-os/base-main                  | Hyprland  | AMD / Intel          |
+| ghcr.io/heyhusen/lightblue-nvidia          | ghcr.io/ublue-os/silverblue-nvidia          | Gnome     | Nvidia (Proprietary) |
+| ghcr.io/heyhusen/lightblue-hyprland-nvidia | ghcr.io/ublue-os/base-nvidia                | Hyprland  | Nvidia (Proprietary) |
 
 ## Features
 
@@ -61,10 +63,33 @@ policies installed:
   ```sh
   sudo bootc switch --enforce-container-sigpolicy --apply ghcr.io/heyhusen/lightblue:42
   ```
+3. Last, setup Nvidia GPU (Nvidia only)
+
+  ```sh
+  ujust configure-nvidia
+  ```
+
+  And reboot.
+
+  ```sh
+  systemctl reboot
+  ```
 
 ### Post Install (Optional)
 
 This step is optional, but mandatory for me. You only need to run it once.
+
+#### Set optimus laptop (AMD/Intel & Nvidia hybrid)
+
+```sh
+ujust configure-nvidia-optimus
+```
+
+Then, reboot.
+
+```sh
+systemctl reboot
+```
 
 #### Set fish as default shell
 
