@@ -62,6 +62,7 @@ jobs:
           dnf -y copr enable solopasha/hyprland
           dnf -y copr enable erikreider/SwayNotificationCenter
           dnf -y copr enable codelovr/swayosd
+          dnf -y copr enable sureclaw/opencode
 
       - name: Parse package upgrades (old -> new)
         id: upgrades

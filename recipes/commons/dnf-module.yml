@@ -15,6 +15,7 @@ modules:
         - dejan/lazygit
         - lihaohong/yazi
         - rivenirvana/lazydocker
+        - sureclaw/opencode
       nonfree: rpmfusion
       cleanup: true
     optfix:
@@ -45,6 +46,7 @@ modules:
         - lazydocker
         - zellij
         - darkman
+        - opencode
 
         ## GUI
         - mpv

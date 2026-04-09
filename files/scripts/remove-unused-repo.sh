@@ -11,6 +11,7 @@ dnf -y remove terra-release
 dnf -y copr remove dejan/lazygit
 dnf -y copr remove lihaohong/yazi
 dnf -y copr remove rivenirvana/lazydocker
+dnf -y copr remove sureclaw/opencode
 rm /etc/yum.repos.d/vscode.repo
 rm /etc/yum.repos.d/antigravity.repo
 rm /etc/yum.repos.d/kubernetes.repo
