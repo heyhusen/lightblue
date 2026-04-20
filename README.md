@@ -17,8 +17,8 @@ for me. Then, I discovered [BlueBuild](https://blue-build.org/). Finally, I
 could build my own immutability system to my liking. So, I made this.
 
 > This image is based on
-[Ublue's base image](https://github.com/orgs/ublue-os/packages) for Fedora bootable
-container. Use at your own risk.
+[Ublue's base image](https://github.com/orgs/ublue-os/packages) for Fedora 
+bootable container. Use at your own risk.
 
 ## Variant
 
@@ -32,9 +32,9 @@ container. Use at your own risk.
 ## Features
 
 - Remove unnecessary repositories, software and gnome extension
-- Disable layering (with `rpm-ostree`)
 - Enable hardware video acceleration (with VAAPI)
-- Install `helix` as main text editor, also `zed` and `vscode` for heavier task
+- Install `helix` as main text editor, also `zed`, `sublime-text` and `vscode`
+  for heavier task
 - Install `mise` for manage per project tools
 - Install `docker` and `compose` for devcontainer
 - Replace `firefox` with `zen` as main browser

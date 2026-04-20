@@ -47,11 +47,14 @@ jobs:
 
           rpm --import https://packages.microsoft.com/keys/microsoft.asc
           rpm -v --import https://yum.tableplus.com/apt.tableplus.com.gpg.key
+          rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
 
           cp ./files/system/etc/yum.repos.d/* /etc/yum.repos.d/
 
           dnf config-manager addrepo --overwrite \
             --from-repofile=https://yum.tableplus.com/rpm/x86_64/tableplus.repo
+          dnf config-manager addrepo \
+            --from-repofile=https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
 
           dnf install -y --nogpgcheck --repofrompath \
             'terra,https://repos.fyralabs.com/terra$releasever' terra-release
