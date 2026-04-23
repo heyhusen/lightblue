@@ -48,6 +48,7 @@ modules:
         - zellij
         - darkman
         - kubectl
+        - k9s
 
         ## GUI
         - mpv
