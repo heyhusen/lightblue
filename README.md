@@ -44,7 +44,7 @@ bootable container. Use at your own risk.
 
 ## Installation
 
-This image is based on Fedora Atomic 42. So, make sure you already had that
+This image is based on Fedora Atomic 44. So, make sure you already had that
 version installed. Any variant should work.
 
 This repo will build images weekly. So, if you want to update your system, simply
@@ -56,12 +56,12 @@ change the image tag to any available tag on [packages](https://github.com/heyhu
 policies installed:
 
   ```sh
-  sudo bootc switch --apply ghcr.io/heyhusen/lightblue:42
+  sudo bootc switch --apply ghcr.io/heyhusen/lightblue:44
   ```
 2. Then rebase to the signed image, like so:
 
   ```sh
-  sudo bootc switch --enforce-container-sigpolicy --apply ghcr.io/heyhusen/lightblue:42
+  sudo bootc switch --enforce-container-sigpolicy --apply ghcr.io/heyhusen/lightblue:44
   ```
 3. Last, setup Nvidia GPU (Nvidia only)
 

@@ -4,7 +4,7 @@ name: lightblue
 description: My customized immutable system based on Fedora Silverblue.
 
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 43
+image-version: 44
 
 modules:
   - from-file: commons/file-module.yml
