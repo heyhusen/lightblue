@@ -74,7 +74,7 @@ modules:
         - wofi
         - waybar
         - wlogout
-        - swayosd-git
+        - swayosd
         - repo: copr:copr.fedorainfracloud.org:erikreider:SwayNotificationCenter
           packages:
             - SwayNotificationCenter
