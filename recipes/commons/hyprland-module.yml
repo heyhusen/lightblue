@@ -4,7 +4,7 @@ modules:
       copr:
         - solopasha/hyprland
         - erikreider/SwayNotificationCenter
-        - codelovr/swayosd
+        - phynecs/swayosd
       cleanup: true
     install:
       packages:
@@ -95,7 +95,7 @@ modules:
     snippets:
       - "dnf -y copr remove solopasha/hyprland"
       - "dnf -y copr remove erikreider/SwayNotificationCenter"
-      - "dnf -y copr remove codelovr/swayosd"
+      - "dnf -y copr remove phynecs/swayosd"
 
   - type: systemd
     system:
