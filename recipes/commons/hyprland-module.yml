@@ -44,6 +44,7 @@ modules:
         # Screenshot
         - slurp
         - grim
+        - hyprshot
 
         # Networking
         - network-manager-applet
@@ -86,7 +87,6 @@ modules:
       cleanup: true
     install:
       packages:
-        - hyprshot
         - hyprpolkitagent
         - hyprpaper
         - hyprpicker
