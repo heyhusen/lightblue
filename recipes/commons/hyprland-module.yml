@@ -20,7 +20,7 @@ modules:
         - cliphist
         - fprintd-pam
         - gnome-keyring-pam
-        - gnome-themes-extra
+        - adw-gtk3-theme
         - grim
         - gvfs
         - gvfs-smb
