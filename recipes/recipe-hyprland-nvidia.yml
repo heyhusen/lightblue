@@ -4,7 +4,7 @@ name: lightblue-hyprland-nvidia
 description: My customized immutable system based on Fedora Atomic.
 
 base-image: ghcr.io/ublue-os/base-nvidia
-image-version: 43
+image-version: 44
 
 modules:
   - from-file: commons/file-module.yml
