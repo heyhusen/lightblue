@@ -48,6 +48,7 @@ jobs:
           rpm --import https://packages.microsoft.com/keys/microsoft.asc
           rpm -v --import https://yum.tableplus.com/apt.tableplus.com.gpg.key
           rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+          rpm --import https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/yum/RPM-GPG-KEY-windsurf
 
           cp ./files/system/etc/yum.repos.d/* /etc/yum.repos.d/
 
