@@ -58,6 +58,7 @@ modules:
         - tableplus
         - antigravity
         - sublime-text
+        - https://api2.cursor.sh/updates/download/golden/linux-x64-rpm/cursor/latest
     remove:
       packages:
         - fedora-third-party
