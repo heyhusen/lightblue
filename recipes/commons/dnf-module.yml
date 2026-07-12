@@ -50,6 +50,7 @@ modules:
         - darkman
         - kubectl
         - k9s
+        - runc
 
         ## GUI
         - mpv
