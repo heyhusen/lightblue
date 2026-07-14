@@ -1,0 +1,8 @@
+{
+  "runtimes": {
+    "crun": {
+      "path": "/usr/bin/crun"
+    }
+   },
+  "default-runtime": "crun"
+}
