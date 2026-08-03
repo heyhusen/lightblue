@@ -51,6 +51,7 @@ modules:
         - kubectl
         - k9s
         - runc
+        - lm_sensors
 
         ## GUI
         - mpv
