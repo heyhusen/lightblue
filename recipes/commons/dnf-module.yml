@@ -75,6 +75,7 @@ modules:
     snippets:
       - "wget -q -O - https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | K3D_INSTALL_DIR=/usr/bin bash"
       - "wget -q -O - https://raw.githubusercontent.com/heyhusen/opencode/refs/heads/dev/install | OPENCODE_INSTALL_DIR=/usr/bin bash"
+      - "curl -fsSL https://github.com/aaif-goose/goose/releases/download/stable/download_cli.sh | CONFIGURE=false GOOSE_BIN_DIR=/usr/bin bash"
 
   # Desktop Entry
   - type: files
