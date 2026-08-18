@@ -16,7 +16,6 @@ modules:
         - https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
       copr:
         - dejan/lazygit
-        - lihaohong/yazi
         - rivenirvana/lazydocker
       nonfree: rpmfusion
       cleanup: true

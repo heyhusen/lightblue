@@ -61,7 +61,6 @@ jobs:
             'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
           dnf -y copr enable dejan/lazygit
-          dnf -y copr enable lihaohong/yazi
           dnf -y copr enable rivenirvana/lazydocker
           dnf -y copr enable lionheartp/Hyprland
           dnf -y copr enable phynecs/swayosd
