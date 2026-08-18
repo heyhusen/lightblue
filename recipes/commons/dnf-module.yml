@@ -53,6 +53,7 @@ modules:
         - runc
         - lm_sensors
         - crush
+        - usage-cli
 
         ## GUI
         - mpv
