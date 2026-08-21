@@ -13,3 +13,5 @@ dnf -y copr remove lihaohong/yazi
 dnf -y copr remove rivenirvana/lazydocker
 rm /etc/yum.repos.d/vscode.repo
 rm /etc/yum.repos.d/kubernetes.repo
+rm /etc/yum.repos.d/charm.repo
+rm /etc/yum.repos.d/windsurf.repo
