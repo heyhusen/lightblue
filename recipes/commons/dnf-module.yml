@@ -60,7 +60,6 @@ modules:
         - code
         - zed
         - tableplus
-        - antigravity
         - sublime-text
         - windsurf
         - https://api2.cursor.sh/updates/download/golden/linux-x64-rpm/cursor/latest
