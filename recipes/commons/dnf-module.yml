@@ -1,6 +1,7 @@
 modules:
   - type: script
     snippets:
+      - "dnf clean all"
       - "dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release"
       
   # Packages
@@ -60,7 +61,7 @@ modules:
         - zed
         - tableplus
         - sublime-text
-        - https://github.com/0xErwin1/dbflux/releases/download/v0.7.0/dbflux-0.7.0-1.x86_64.rpm
+        - https://github.com/0xErwin1/dbflux/releases/download/v0.7.7/dbflux-0.7.7-1.x86_64.rpm
     remove:
       packages:
         - fedora-third-party

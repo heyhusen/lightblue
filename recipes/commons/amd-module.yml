@@ -1,4 +1,8 @@
 modules:
+  - type: script
+    snippets:
+      - "dnf clean all"
+
   - type: dnf
     repos:
       nonfree: rpmfusion
