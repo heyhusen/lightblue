@@ -62,6 +62,7 @@ modules:
         - tableplus
         - sublime-text
         - https://github.com/0xErwin1/dbflux/releases/download/v0.7.7/dbflux-0.7.7-1.x86_64.rpm
+        - https://app.gitbutler.com/downloads/release/linux/x86_64/rpm
     remove:
       packages:
         - fedora-third-party
