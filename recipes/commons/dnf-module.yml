@@ -52,7 +52,6 @@ modules:
         - k9s
         - runc
         - lm_sensors
-        - crush
         - usage-cli
 
         ## GUI
