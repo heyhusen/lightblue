@@ -60,6 +60,7 @@ modules:
         - zed
         - tableplus
         - sublime-text
+        - https://app.gitbutler.com/downloads/release/linux/x86_64/rpm
     remove:
       packages:
         - fedora-third-party
