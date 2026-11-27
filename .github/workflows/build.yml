@@ -35,8 +35,6 @@ jobs:
           # !! Add your recipes here
           - recipe-gnome.yml
           - recipe-hyprland.yml
-          - recipe-gnome-nvidia.yml
-          - recipe-hyprland-nvidia.yml
 
     steps:
       - name: Checkout repository
@@ -66,8 +64,6 @@ jobs:
         name:
           - lightblue
           - lightblue-hyprland
-          - lightblue-nvidia
-          - lightblue-hyprland-nvidia
 
     steps:
       - name: Checkout repository
