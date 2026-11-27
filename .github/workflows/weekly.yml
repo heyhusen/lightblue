@@ -20,7 +20,7 @@ permissions:
 jobs:
   check:
     name: Check updates on ${{ matrix.fedora }}
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     strategy:
       matrix:
         fedora:
